@@ -10,6 +10,7 @@
     {% endcall %}
     {{ form_header(form, id='attachment-link-form')}}
     {{ form_row(form.link_url, widget_attrs={'placeholder': 'Example: https://www.google.com'}) }}
+    {{ form_rows(form, skip=('folder', 'protected', 'acl', 'title', 'link_url')) }}
     {{ form_rows(form, fields=('title', 'description', 'folder', 'protected')) }}
     {{ form_rows(form, fields=('acl',)) }}
     {{ protection_message | safe }}
